@@ -5,11 +5,11 @@ script.on_init(function()
         for product, recipeProduct in pairs(prototypes["recipe"][recipeName].products) do
             text = text .. recipeProduct.name .. " " .. recipeProduct.amount .. " "
         end
-        text = text .. " Ingredients: "
+        text = text .. "Ingredients: "
         for product, recipeIngredient in pairs(prototypes["recipe"][recipeName].ingredients) do
             text = text .. recipeIngredient.name .. " " .. recipeIngredient.amount .. " "
         end
-        text = text .. " Time in seconds: " .. prototypes["recipe"][recipeName].energy
+        text = text .. "Time in seconds: " .. prototypes["recipe"][recipeName].energy
     text = text .. "\n"
     end
     helpers.write_file("recipes.csv", text, false)
