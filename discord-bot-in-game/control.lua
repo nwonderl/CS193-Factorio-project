@@ -2,8 +2,8 @@ script.on_init(function()
     local text = ""
     for recipeName, recipe in pairs(prototypes["recipe"]) do
       text = text .. recipeName .. "products: "
-            for productName, name in pairs(prototypes["recipe"]["recipeName"].results) do
-                 text = text .. productName
+            for result, recipeResult in pairs(prototypes["recipe"]["recipeName"].results) do
+                 text = text .. recipeResults.name
             end
     text = text .. "\n"
     end
