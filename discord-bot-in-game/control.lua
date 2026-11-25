@@ -3,5 +3,5 @@ script.on_init(function()
     for recipeName, recipe in pairs(prototypes["recipe"]) do
       text = text .. recipeName .. "\n"
     end
-    game.write_file("recipes.csv", text, false)
+    helpers.write_file("recipes.csv", text, false)
 end)
